@@ -1,29 +1,37 @@
-# OrangeHRM-Selenium-Automation-Framework-POM
-QA Automation framework for OrangeHRM using Java, Selenium WebDriver, and TestNG. Implements Page Object Model (POM) for modular and maintainable end-to-end testing.
+# OrangeHRM Automation Project
 
-# OrangeHRM Automation Framework
+This project is an automated testing suite developed for the **OrangeHRM** web application. It is designed to ensure the quality and stability of core HR processes using Selenium WebDriver, Java, and modern automation best practices.
 
-This project is an automated testing framework developed for the OrangeHRM web application. It is designed with a focus on scalability, maintainability, and reusability using the Page Object Model (POM) design pattern.
+## Technical Highlights
 
-## Tech Stack
-- **Language:** Java
-- **Automation Tool:** Selenium WebDriver
-- **Test Framework:** TestNG
-- **Build Tool:** Maven
-- **Design Pattern:** Page Object Model (POM)
+* OOP Principles: Developed a modular framework using Java OOP concepts (Encapsulation, Inheritance, Polymorphism) for clean, maintainable, and reusable code.
+* Automation Suite: Designed a comprehensive test suite using 'TestNG' to manage end-to-end scenarios, including Login, Employee Management, and System Administration.
+* Chaintest Reporting:Integrated 'Chaintest' for generating detailed, highly readable, and professional automation test reports, ensuring better visibility of test execution statuses.
+* Maintainability: Built using the Page Object Model (POM) design pattern, allowing for efficient scaling as the application evolves.
 
-## Key Features
-- Modular framework structure separating Page Objects and Test Scripts.
-- Implementation of robust test assertions.
-- Data-driven testing capability.
-- Detailed test execution reporting.
+## Technologies Used
 
-## Project Structure
-- `src/main/java`: Contains Page Object classes (locators and actions).
-- `src/test/java`: Contains TestNG test scripts.
-- `src/test/resources`: Configuration files and test data.
+* Language: Java
+* Automation Tool: Selenium WebDriver
+* Testing Framework: TestNG
+* Reporting: Chaintest
+* Build Tool: Maven
 
-## How to Run
-1. Clone the repository.
-2. Ensure Maven is installed.
-3. Run the tests using: `mvn test`
+## How to Run the Tests
+
+1. Clone this repository to your local machine.
+2. Ensure you have the necessary dependencies configured via Maven.
+3. Execute the test suite using TestNG.
+4. After execution, the Chaintest report' will be automatically generated in the `target/chaintest` directory.
+
+## Contributing
+
+Contributions are welcome! If you'd like to improve this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature-name`).
+3. Make your changes and commit them (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature-name`).
+5. Open a Pull Request to the `main` branch.
+
+---
