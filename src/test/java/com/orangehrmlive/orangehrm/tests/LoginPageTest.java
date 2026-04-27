@@ -1,13 +1,16 @@
 package com.orangehrmlive.orangehrm.tests;
 
+import com.aventstack.chaintest.plugins.ChainTestListener;
 import com.orangehrmlive.orangehrm.pages.LoginPage;
 import com.orangehrmlive.orangehrm.utils.TestBase;
 import org.openqa.selenium.support.PageFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(ChainTestListener.class)
 public class LoginPageTest extends TestBase {
 
     private static final Logger log = LoggerFactory.getLogger(LoginPageTest.class);
