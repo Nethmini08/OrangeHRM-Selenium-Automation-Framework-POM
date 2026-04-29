@@ -1,10 +1,7 @@
 package com.orangehrmlive.orangehrm.tests;
 
 import com.aventstack.chaintest.plugins.ChainTestListener;
-import com.orangehrmlive.orangehrm.pages.DashboardPage;
-import com.orangehrmlive.orangehrm.pages.LeavePage;
-import com.orangehrmlive.orangehrm.pages.LoginPage;
-import com.orangehrmlive.orangehrm.pages.NavigationPagePanel;
+import com.orangehrmlive.orangehrm.pages.*;
 import com.orangehrmlive.orangehrm.utils.TestBase;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -26,7 +23,6 @@ public class DashboardPageTest extends TestBase {
         //verify the dashboard Text
         DashboardPage dashboardpage = PageFactory.initElements(driver, DashboardPage.class);
         Assert.assertEquals(dashboardpage.getDashboardText(), "Dashboard");
-
     }
 
     @Test
@@ -43,8 +39,27 @@ public class DashboardPageTest extends TestBase {
 
         //Verify Assign leave
         LeavePage leavePage = PageFactory.initElements(driver,LeavePage.class);
-        Assert.assertEquals(leavePage.AssignLeaveButtonDisplay(),false);
+        Assert.assertEquals(leavePage.AssignLeaveButtonDisplay(),true);
+        System.out.println("This is pass");
+    }
+
+    @Test
+    public void TC_03(){
+        //User Login
+        LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+        loginPage.typeUsername("Admin");
+        loginPage.typePassword("admin123");
+        loginPage.clickLoginButton();
+
+        //Click Admin Button
+        NavigationPagePanel navigationPagePanel = PageFactory.initElements(driver,NavigationPagePanel.class);
+                navigationPagePanel.ClickButtonAdmin();
+
+        //Verify UserManagementButton
+        AdminPage adminPage = PageFactory.initElements(driver, AdminPage.class);
+        Assert.assertEquals(adminPage.UserManagementButtonDisplay(),true);
 
     }
+
 
 }

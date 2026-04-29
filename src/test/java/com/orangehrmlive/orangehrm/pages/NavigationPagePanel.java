@@ -13,6 +13,10 @@ public class NavigationPagePanel {
     @FindBy(linkText = "My Info")
     private WebElement NavMyInfo;
 
+    //Verify NavAdmin Button
+    @FindBy(linkText = "Admin")
+    private WebElement NavAdmin;
+
 
     //02.Write the action method for element
     public void ClickButtonLeave(){
@@ -22,5 +26,10 @@ public class NavigationPagePanel {
     //Verify NavMyInfo
     public boolean IsDisplayedMyInfoButton(){
         return NavMyInfo.isDisplayed();
+    }
+
+    //Verify NavAdmin
+    public void ClickButtonAdmin(){
+        NavAdmin.click();
     }
 }
