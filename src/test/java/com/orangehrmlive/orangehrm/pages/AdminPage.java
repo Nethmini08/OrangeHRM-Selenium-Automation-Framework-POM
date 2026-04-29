@@ -100,7 +100,10 @@ public class AdminPage {
 
     //value for username
     public void SetValueUsername(){
-        txtUsername.sendKeys("Tharushi123");
+        // Generate a random number to make username unique
+        int randomNum = (int)(Math.random() * 10000);
+        String uniqueUsername = "Tharushi" + randomNum;
+        txtUsername.sendKeys(uniqueUsername);
     }
 
     //value for password
