@@ -6,6 +6,7 @@
             <class name="com.orangehrmlive.orangehrm.tests.LoginPageTest"/>
             <class name="com.orangehrmlive.orangehrm.tests.DashboardPageTest"/>
             <class name="com.orangehrmlive.orangehrm.tests.NavigationPageTest"/>
+            <class name="com.orangehrmlive.orangehrm.tests.AdminPageTest"/>
         </classes>
     </test>
 
